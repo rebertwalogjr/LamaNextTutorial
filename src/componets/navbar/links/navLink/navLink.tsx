@@ -5,13 +5,11 @@ import styles from "./navLink.module.css"
 import Link from "next/link"
 
 interface iItem {
-  item: {
-    title: string,
-    path: string
-  }
+  title: string,
+  path: string
 }
 
-const NavLink = ({item} : iItem) => {
+const NavLink = ({item} : {item : iItem}) => {
 
   const pathName = usePathname()
   
